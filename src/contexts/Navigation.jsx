@@ -4,6 +4,7 @@ import { Spinner } from 'flowbite-react';
 
 const Home = React.lazy(() => import('@pages/Home'));
 const Auth = React.lazy(() => import('@pages/Auth'));
+const Editor = React.lazy(() => import('@pages/BlogEditor'));
 
 
 function Navigation() {
@@ -15,6 +16,7 @@ function Navigation() {
       <Routes>
         <Route path="/" index element={<Home />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/editor" element={<Editor />} />
       </Routes>
     </Suspense>
   );

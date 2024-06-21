@@ -37,6 +37,9 @@ function Navbar() {
           <Link to={'/auth'}>
             <Button pill color="dark"  >Create An Account</Button>
           </Link>
+          <Link to={'/editor'}>
+            <Button pill color="dark"  >Post Blog</Button>
+          </Link>
 
         </div>
 

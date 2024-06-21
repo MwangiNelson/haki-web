@@ -3,10 +3,9 @@ import { useForm } from 'react-hook-form';
 import { BsCheck2Circle, BsClock, BsLaptop, BsList, BsPerson, BsPinMap, BsPlusCircle, BsQuestionCircleFill, BsUpload, BsYoutube } from "react-icons/bs";
 import { Breadcrumb, Button, FloatingLabel, Label, Modal, Select, Spinner, TextInput, Textarea, Tooltip, Badge, Datepicker } from 'flowbite-react';
 import { Selector, Text, } from '@rewind-ui/core';
-import { generateRandomString, getYouTubeEmbedLink, handleImageUpload } from '@utils/FormUtils';
+import { generateRandomString, handleImageUpload } from '@utils/FormUtils';
 import ImageInput from '@utils/ImageInput';
 import { QuillEditor } from '@utils/QuillEditor';
-import { FaXmark } from 'react-icons/fa6';
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
 
@@ -37,17 +36,6 @@ const PostBlog = () => {
     watch,
     formState: { errors }, } = useForm()
 
-  const addToSelectedThemes = (theme) => {
-
-    if (!selectedThemes.includes(theme)) {
-      setSelectedThemes([...selectedThemes, theme])
-    }
-
-  }
-
-  const removeSelectedTheme = (theme) => {
-    setSelectedThemes(selectedThemes.filter(item => item !== theme))
-  }
 
   const handleImageSelected = (selectedImage, previewUrl) => {
     setImage(selectedImage);
@@ -156,18 +144,18 @@ const PostBlog = () => {
 
   return (
     <>
-      <div className="w-full px-4 h-fit  flex flex-row justify-start items-start">
-        <div className="w-full flex flex-col gap-1 justify-start items-start">
+      <div className="w-full px-4 h-fit  flex flex-row justify-center items-start">
+        <div className="w-3/4 flex flex-col gap-1 justify-start items-start">
           <Breadcrumb className='w-fit bg-green-100 p-3 rounded-md py-1'>
-            <Breadcrumb.Item href='/general' icon={BsList} >General</Breadcrumb.Item>
-            <Breadcrumb.Item href='#' icon={BsPlusCircle}>Post blog</Breadcrumb.Item>
+            <Breadcrumb.Item href='/' icon={BsList} >Home</Breadcrumb.Item>
+            <Breadcrumb.Item href='' icon={BsPlusCircle}>Post blog</Breadcrumb.Item>
           </Breadcrumb>
-          <h1 className="text-center w-fit text-3xl text-black  font-semibold pt-4">Post an blog</h1>
+          <h1 className="text-center w-fit text-3xl text-black  font-semibold pt-4">Post a blog</h1>
 
           <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-full gap-5 py-5'>
             <div className="w-full flex flex-col desktop:flex-row gap-4 justify-between">
               <div className="w-full h-fit desktop:w-8/12 flex flex-col">
-                <Text variant='h5' weight='bold' className='py-3' >blog details :</Text>
+                <Text variant='h5' weight='bold' className='py-3' >Blog details :</Text>
 
                 {/*blog title input field */}
                 <div className="flex flex-col w-full h-fit gap-3 justify-start items-start">
@@ -222,7 +210,7 @@ const PostBlog = () => {
 
                 {/* blog input content area */}
                 <div className="w-full flex flex-col gap-3 h-[initial]">
-                  <Text variant='h5' weight='bold' className='py-0 m-0 desktop:py-3' >blog Banner Image:</Text>
+                  <Text variant='h5' weight='bold' className='py-0 m-0 desktop:py-3' >Blog Banner Image:</Text>
 
                   <ImageInput
                     onImageSelected={handleImageSelected}

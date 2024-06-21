@@ -9,9 +9,9 @@ import React from "react";
 function App() {
 
   return (
-    <div className="bg-white p-2 h-[100vh] xl:!h-[100vh]">
+    <div className="bg-white p-2  min-h-screen w-screen">
       <section
-        className="relative rounded-lg flex flex-col bg-primary items-center h-full lg:h-full justify-between "
+        className="relative rounded-lg flex flex-col bg-primary items-center h-full w-full justify-between "
       >
         <Navbar />
         <ToastContainer />
