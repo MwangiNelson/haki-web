@@ -6,10 +6,12 @@ import Hero from "./pages/Hero";
 
 function App() {
   return (
-    <section className="w-full h-screen bg-[#F0F0F0]">
+    <>
       <Navbar />
-      <Hero />
-    </section>
+      <section className="w-full h-screen bg-[#F0F0F0] p-20">
+        <Hero />
+      </section>
+    </>
   );
 }
 
