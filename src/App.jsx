@@ -13,7 +13,6 @@ function App() {
         <Hero />
         <CarouselCards />
       </section>
-      <section className="w-full h-screen bg-green-500"></section>
     </>
   );
 }
