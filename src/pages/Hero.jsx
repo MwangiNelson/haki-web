@@ -1,8 +1,9 @@
-import KenyaSVG from "../assets/images/Kenya.svg"; // Adjust the path according to your file structure
+import KenyaSVG from "@assets/images/Kenya.svg"; // Adjust the path according to your file structure
+import CarouselCards from "../components/CarouselCards";
 
 const Hero = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row text-[#040405]">
+    <div className="w-full flex flex-col md:flex-row text-[#040405] justify-center ">
       <div className="flex-1  md:p-10 pt-20">
         <h1 className="md:text-9xl text-4xl font-black text-center md:text-start">
           Haki <span className="block">Hub</span>
@@ -32,6 +33,7 @@ const Hero = () => {
         {/* Import an svg called Kenya.svg */}
         <img src={KenyaSVG} alt="Kenya" />
       </div>
+      <CarouselCards />
     </div>
   );
 };

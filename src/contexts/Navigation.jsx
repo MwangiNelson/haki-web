@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Routes, Route, Router } from "react-router-dom";
 import { Spinner } from 'flowbite-react';
 
-const Home = React.lazy(() => import('@pages/Home'));
+const Home = React.lazy(() => import('@pages/Hero'));
 const Auth = React.lazy(() => import('@pages/Auth'));
 const Editor = React.lazy(() => import('@pages/BlogEditor'));
 

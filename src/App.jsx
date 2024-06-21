@@ -1,17 +1,15 @@
 // Components
 import CarouselCards from "./components/CarouselCards";
 import Navbar from "./components/Navbar";
-
-// Pages
-import Hero from "./pages/Hero";
+import Navigation from "./contexts/Navigation";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <section className="w-full h-screen bg-[#F0F0F0] p-20 relative">
-        <Hero />
-        <CarouselCards />
+
+      <section className="w-full h-screen bg-[#F0F0F0] items-center justify-center flex flex-col relative">
+        <Navbar />
+        <Navigation />
       </section>
     </>
   );
