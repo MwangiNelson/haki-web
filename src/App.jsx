@@ -1,6 +1,6 @@
 // Components
 import CarouselCards from "./components/CarouselCards";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import Navigation from "./contexts/Navigation";
 
 function App() {
