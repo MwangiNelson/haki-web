@@ -1,64 +1,18 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Button } from "flowbite-react";
-import HakiLogo from '@assets/haki-logos/haki-no-bg.png';
+// Icons
+import { MdAndroid } from "react-icons/md";
 
-
-function Navbar() {
-  const location = useLocation();
-  const path = location.pathname;
-
+const Navbar = () => {
   return (
-    <nav
-      className={`w-full ${path == "/chat" ? "flex" : "flex"
-        } flex-row bg-primary py-4  justify-between px-2 md:px-10 h-fit items-center rounded-t-md`}
-    >
-
-
-      <div className="w-1/4 h-fit">
-        <a href="/" className="w-fit flex flex-row gap-2 items-center justify-center">
-          <img
-            src={HakiLogo}
-            className="h-10 object-left object-cover  "
-            alt=""
-          />
-          HAKI HUB
-        </a>
-      </div>
-
-      <div className="hidden md:flex flex-row">
-
-
-
-        <div className="flex flex-row gap-4">
-          <Link to={'/auth'}>
-            <Button pill className="border-none px-4" color="light">Sign In</Button>
-          </Link>
-          <Link to={'/auth'}>
-            <Button pill color="dark"  >Create An Account</Button>
-          </Link>
-          <Link to={'/editor'}>
-            <Button pill color="dark"  >Post Blog</Button>
-          </Link>
-
-        </div>
-
-
-      </div>
-
-      <div className="flex md:hidden h-fit">
-        <Link to={'/auth'}>
-          <Button className="p-0 m-0 bg-blue-50 text-blue-900" pill >
-            {/* <RiMenu3Line className="text-2xl text-blue-600" /> */}
-            Sign In
-          </Button></Link>
-
-
-      </div>
-
-
+    <nav className="w-full p-5 px-16 bg-[#f0f0f081] backdrop-blur-3xl border-b flex flex-col md:flex-row items-center justify-between gap-5 fixed top-0 z-10">
+      <p className="text-xl font-semibold text-[#D05848]">
+        #RejectFinanceBill2024
+      </p>
+      <button className="flex items-center text-xs md:text-base gap-4 bg-[#2E7D32] text-slate-100 px-6 py-3 rounded-md shadow-xl hover:shadow-md transition-all duration-150 ease-in-out">
+        <MdAndroid color="white" size={30} />
+        <p>Download our app</p>
+      </button>
     </nav>
   );
-}
+};
 
 export default Navbar;
