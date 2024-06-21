@@ -1,24 +1,17 @@
-import { ToastContainer } from "react-toastify";
-import Navigation from "@contexts/Navigation";
-import "react-toastify/dist/ReactToastify.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import React from "react";
-
+// Components
+import CarouselCards from "./components/CarouselCards";
+import Navbar from "./components/Navbar";
+import Navigation from "./contexts/Navigation";
 
 function App() {
-
   return (
-    <div className="bg-white p-2 h-[100vh] xl:!h-[100vh]">
-      <section
-        className="relative rounded-lg flex flex-col bg-primary items-center h-full lg:h-full justify-between "
-      >
+    <>
+
+      <section className="w-full min-h-screen h-fit bg-[#F0F0F0] items-center justify-start flex flex-col relative">
         <Navbar />
-        <ToastContainer />
         <Navigation />
-        <Footer />
       </section>
-    </div>
+    </>
   );
 }
 
