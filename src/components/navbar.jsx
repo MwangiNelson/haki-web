@@ -25,12 +25,12 @@ const links = [
 
 const Navbar = ({ currentSection }) => {
   return (
-    <nav className="w-full p-5 px-16 bg-[#f0f0f081] backdrop-blur-3xl border-b flex flex-col md:flex-row items-center justify-between gap-5 sticky top-0 z-10">
+    <nav className="w-full p-5 md:px-16 px-10 bg-[#f0f0f081] backdrop-blur-3xl border-b flex flex-col md:flex-row items-center justify-between gap-5 sticky top-0 z-10">
       <p className="text-xl font-semibold text-[#D05848]">
         #RejectFinanceBill2024
       </p>
       {currentSection && (
-        <ul className="flex gap-5">
+        <ul className="flex justify-between text-sm md:text-base w-full md:w-1/3">
           {links.map((link) => (
             <li key={link.id}>
               <a
