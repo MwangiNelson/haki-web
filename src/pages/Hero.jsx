@@ -3,7 +3,7 @@ import CarouselCards from "../components/CarouselCards";
 
 const Hero = () => {
   return (
-    <div className="w-5/6 flex  flex-col md:flex-row text-[#040405] justify-center h-full">
+    <div className="w-5/6 flex mx-auto flex-col md:flex-row text-[#040405] justify-center h-full">
       <div className="flex-1 flex flex-col h-full md:p-10 pt-20">
         <h1 className="md:text-9xl text-4xl font-black text-center md:text-start">
           Haki <span className="block">Hub</span>
