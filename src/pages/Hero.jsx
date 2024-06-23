@@ -1,12 +1,12 @@
-import KenyaSVG from "@assets/images/Kenya.svg"; // Adjust the path according to your file structure
+import KenyaSVG from "@assets/images/Kenya.svg";
 import CarouselCards from "../components/CarouselCards";
 
 const Hero = () => {
   return (
-    <div className="w-5/6 flex  flex-col md:flex-row text-[#040405] justify-center h-full">
+    <div className="w-5/6 flex mx-auto mt-20 flex-col md:flex-row text-[#040405] justify-center h-full">
       <div className="flex-1 flex flex-col h-full md:p-10 pt-20">
         <h1 className="md:text-9xl text-4xl font-black text-center md:text-start">
-          Haki <span className="block">Hub</span>
+          Haki <span className="md:block">Hub</span>
         </h1>
         <p className="text-center md:text-start">
           Haki Hub: Empowering Kenyans with updates on ongoing bills, protest
