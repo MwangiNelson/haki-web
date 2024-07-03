@@ -13,7 +13,7 @@ const Home = () => {
   const [currentSection, setCurrentSection] = useState("");
 
   const { ref: educationRef, inView: educationInView } = useInView({
-    threshold: 0.5, // Trigger when 50% of the section is in view
+    threshold: 0.5,
   });
 
   useEffect(() => {
