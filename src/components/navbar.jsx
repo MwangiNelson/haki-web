@@ -50,7 +50,7 @@ const Navbar = ({ currentSection }) => {
         href="https://github.com/DanroyMwangi/haki-hub/raw/develop/apks/HakiHub.apk"
         className={`${
           currentSection ? "hidden" : "flex"
-        } items-center text-xs md:text-base gap-4 bg-[#2E7D32] text-slate-100 px-6 py-3 rounded-md shadow-xl hover:shadow-md transition-all duration-150 ease-in-out`}
+        } items-center md:flex text-xs md:text-base gap-4 bg-[#2E7D32] text-slate-100 px-6 py-3 rounded-md shadow-xl hover:shadow-md transition-all duration-150 ease-in-out`}
       >
         <MdAndroid color="white" size={30} />
         <p>Download our app</p>
