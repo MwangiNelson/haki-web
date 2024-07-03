@@ -1,7 +1,10 @@
-// Sections
+// Components
 import Navbar from "../components/navbar";
+
+// Sections
 import Education from "./Education";
 import Hero from "./Hero";
+import Resources from "./Resources";
 
 // React
 import { useEffect, useState } from "react";
@@ -16,13 +19,19 @@ const Home = () => {
     threshold: 0.5,
   });
 
+  const { ref: resourcesRef, inView: resourcesInView } = useInView({
+    threshold: 0.5,
+  });
+
   useEffect(() => {
     if (educationInView) {
       setCurrentSection("education");
+    } else if (resourcesInView) {
+      setCurrentSection("resources");
     } else {
-      setCurrentSection("");
+      setCurrentSection("hero");
     }
-  }, [educationInView]);
+  }, [educationInView, resourcesInView]);
 
   return (
     <>
@@ -39,6 +48,13 @@ const Home = () => {
         className="w-full min-h-screen h-fit bg-[#F0F0F0] flex"
       >
         <Education />
+      </section>
+      <section
+        ref={resourcesRef}
+        id="resources"
+        className="w-full min-h-screen h-fit bg-[#F0F0F0] flex"
+      >
+        <Resources />
       </section>
     </>
   );
