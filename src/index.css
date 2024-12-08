@@ -7,6 +7,7 @@
 * {
   font-family: "DM Sans", sans-serif !important;
   font-optical-sizing: auto;
+  scroll-behavior: smooth;
 }
 
 .scroll-force {
