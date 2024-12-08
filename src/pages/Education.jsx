@@ -38,14 +38,14 @@ const data = [
 const Education = () => {
   return (
     <div className="mt-20 flex w-full h-screen">
-      <div className="mt-20 flex-1 p-20">
+      <div className="mt-20 hidden md:block flex-1 p-20">
         <img
           src={CarouselPlaceholder}
           alt="carousel"
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="mt-20 flex-1 p-20 border-l border-slate-300">
+      <div className="mt-20 flex-1 md:p-20 p-5 border-l border-slate-300">
         <h1 className="underline text-2xl font-bold">Civic Education</h1>
         {data.map((item, index) => {
           return (
